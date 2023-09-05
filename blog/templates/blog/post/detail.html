@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+<button>
+  <a href="{{ post.get_main_page }}"><i class="fa-solid fa-left-long"></i> Back</a>
+</button>
+<h1>{{ post.title }}</h1>
+<p class="date">
+Published {{ post.publish }} by {{ post.author }}
+</p>
+{{ post.body|linebreaks }}
+{% endblock %}
